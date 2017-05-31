@@ -15,6 +15,7 @@ Pi/PC/Laptop Options:
 <br />
 - A different board altogether, maybe another piccolo. Arduino w/ CAN shield http://matthewcmcmillan.blogspot.com/2013/10/arduino-sending-data-over-can-bus.html
 <br />
+<br />
 
 In order to implement CAN communication between the TI piccolo mcu and a laptop, two(?) CAN transceivers are necessary. The TI piccolo might have a built in transceiver which would mean only one transceiver would be necessary. It is possible to connect to a CAN bus directly by placing a diode on the CAN RX pins as outlined here http://electronics.stackexchange.com/questions/30564/is-a-can-enabled-microcontroller-sufficient-to-drive-a-can-bus, but this limits the baud rate and bus length and is overall not ideal. Transceivers are necessary on all nodes in order to connect to the bus and handle arbitration. Along with a transceiver, the laptop will also need a USB to CAN converter. This is not necessary on the piccolo as it has an internal CAN controller exposed via GPIO's. I need to verify if these pins are actually exposed on the launchpad.
 <br />
